@@ -4,9 +4,11 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#0b2545" id="meta-theme">
+<!-- Where the shared server is. Leave empty when server.js serves this page. If this page is hosted somewhere else, put the server's address here, e.g. https://spartanfix.example.com -->
+<meta name="spartanfix-api" content="">
 <title>SpartanFix</title>
 <link rel="icon" type="image/png" href="data:image/png;base64,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">
-<link rel="stylesheet" href="styles.css?v=2026-10-24a">
+<link rel="stylesheet" href="styles.css?v=2026-10-24c">
 </head>
 <body>
 
@@ -18,6 +20,7 @@
     <span class="brand"><span class="mark" aria-hidden="true"></span>SpartanFix</span>
     <span class="who-tag" id="who-tag" hidden></span>
   </div>
+  <div class="mode-banner" id="mode-banner" role="status" hidden></div>
 </header>
 
 <main id="main" tabindex="-1">
@@ -26,29 +29,54 @@
   <section class="screen active" id="s-landing" aria-labelledby="h-landing">
     <div class="hero">
       <h1 id="h-landing">SpartanFix</h1>
-      <p>Report a repair in under a minute. It goes to the crew that can fix it, and you can follow it until it is done.</p>
+      <p>Report a repair in under a minute and follow it here. SpartanFix keeps your report in its own queue for staff to read. It is not an official work order, and nobody has promised a repair until staff answer.</p>
     </div>
-    <div class="roles">
+    <div class="roles" id="roles">
       <button class="role" id="btn-student" type="button"><b>Student login</b><small>Report a problem and track it</small></button>
       <button class="role staff" id="btn-worker" type="button"><b>Worker / Faculty login</b><small>See and update the tickets for your area</small></button>
     </div>
+    <div class="info" id="offline" role="alert" hidden>
+      <b>The SpartanFix server is not answering.</b>
+      <p>Reports are only shared when this page can reach the server, so nothing has been saved. Check your connection and try again.</p>
+      <div class="row">
+        <button class="secondary" id="offline-retry" type="button">Try again</button>
+        <button class="secondary" id="offline-device" type="button">Use a device-only demo</button>
+      </div>
+      <p class="muted small">The device-only demo keeps everything in this browser. Other people and other devices cannot see it.</p>
+    </div>
     <p class="muted fine" id="boot-msg">Starting up...</p>
-    <p class="muted fine">Demo build. Sign-in is simulated, so no real SJSU password is used or stored.</p>
+    <p class="muted fine" id="landing-note"></p>
     <p class="muted fine" id="build-tag"></p>
   </section>
 
-  <!-- ===== Demo sign-in ===== -->
+  <!-- ===== Sign in ===== -->
   <section class="screen" id="s-login" aria-labelledby="h-login">
     <h1 id="h-login">Sign in</h1>
-    <div class="info">Demo sign-in. SJSU single sign-on is not connected yet, so there is no password. <b>Do not enter your real SJSU password.</b> Any @sjsu.edu address works.</div>
-    <form id="login-form" novalidate>
-      <label for="login-email">SJSU email</label>
-      <input type="email" id="login-email" placeholder="you@sjsu.edu" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go">
-      <p class="msg" id="login-msg" role="status"></p>
-      <button class="primary" type="submit">Continue</button>
+    <div class="info" id="login-info"></div>
+    <div id="google-box" hidden>
+      <div id="google-btn"></div>
+    </div>
+    <p class="msg" id="login-msg" role="status"></p>
+    <form id="code-form" novalidate hidden>
+      <h2 class="section-title">Or get a code by email</h2>
+      <label for="code-email">SJSU email</label>
+      <input type="email" id="code-email" placeholder="you@sjsu.edu" autocomplete="email" autocapitalize="none" spellcheck="false" enterkeyhint="go">
+      <div id="code-step" hidden>
+        <label for="code-input">6-digit code</label>
+        <input type="text" id="code-input" inputmode="numeric" autocomplete="one-time-code" maxlength="8" placeholder="123456" enterkeyhint="go">
+      </div>
+      <p class="msg" id="code-msg" role="status"></p>
+      <button class="primary" type="submit" id="code-go">Email me a code</button>
     </form>
-    <h2 class="section-title">Or try a demo account</h2>
-    <div id="demo-accounts"></div>
+    <div id="demo-block">
+      <form id="login-form" novalidate>
+        <label for="login-email">SJSU email</label>
+        <input type="email" id="login-email" placeholder="you@sjsu.edu" autocomplete="off" autocapitalize="none" spellcheck="false" enterkeyhint="go">
+        <button class="primary" type="submit">Continue</button>
+      </form>
+      <h2 class="section-title">Or try a demo account</h2>
+      <div id="demo-accounts"></div>
+    </div>
   </section>
 
   <!-- ===== Student: Screen 1, building ===== -->
@@ -64,6 +92,7 @@
   <section class="screen" id="s-area" aria-labelledby="h-area">
     <h1 id="h-area">Where is the problem?</h1>
     <p class="muted" id="area-sub"></p>
+    <div class="note" id="area-note" role="status" hidden></div>
     <div class="panel" id="area-list"></div>
   </section>
 
@@ -106,11 +135,12 @@
     <label id="cat-label">Type of problem</label>
     <p class="muted small" id="cat-hint"></p>
     <div class="chips" id="cat-chips" role="group" aria-labelledby="cat-label"></div>
-    <div class="info" id="it-note" role="note" hidden><b>Wi-Fi, computer or projector problem?</b> Those go to the IT Service Desk, 408-924-1530. You can still send this report if it is also a building repair.</div>
+    <div class="info" id="it-note" role="note" hidden><b>This looks like a Wi-Fi, computer or classroom tech problem.</b> The IT Service Desk handles those: call <a href="tel:4089241530">408-924-1530</a>. Sending this report only leaves a note for staff. It does not contact IT. A dead wall outlet is a Power / lights problem instead.</div>
 
     <div id="entry-block" hidden>
+      <p class="label-line"><b>Contact preference for this repair</b></p>
       <label class="check"><input type="checkbox" id="entry-ok"> Okay for staff to enter if I am not there.</label>
-      <p class="muted small">Leave this unchecked and staff will contact you first. Your answer covers you only, not others who share the space.</p>
+      <p class="muted small">This is only your preference. It does not speak for the people you share the space with, and it is not a promise about how staff will reach you.</p>
     </div>
 
     <!-- Shown when photos are allowed for this area -->
@@ -121,10 +151,10 @@
       <input type="file" id="photo" accept="image/*" hidden>
       <p class="msg" id="photo-msg" role="status"></p>
       <div id="photo-preview" hidden>
-        <img class="thumb" id="photo-img" alt="Preview of the photo that will be sent">
+        <img class="thumb" id="photo-img" alt="Preview of the photo that will be attached">
         <button type="button" class="link" id="photo-remove">Remove photo</button>
         <label class="check"><input type="checkbox" id="photo-ok"> No people, faces, ID cards, screens or personal belongings are visible.</label>
-        <p class="muted">Location data is removed from your photo before it is sent. Only the staff for this location can see it.</p>
+        <p class="muted">Location data is removed from your photo before it is saved. Any staff account that can open reports can see it.</p>
       </div>
     </div>
 
@@ -136,11 +166,12 @@
 
     <p class="msg" id="form-msg" role="status"></p>
     <button class="primary" id="send" type="button">Send report</button>
+    <button class="link" id="discard-draft" type="button">Discard this draft</button>
   </section>
 
   <!-- ===== Student: sent ===== -->
   <section class="screen" id="s-done" aria-labelledby="h-done">
-    <h1 id="h-done">Report sent</h1>
+    <h1 id="h-done">Report saved</h1>
     <p id="done" role="status"></p>
     <button class="primary" id="done-track" type="button">Track this report</button>
     <button class="secondary block mt" id="done-again" type="button">Report another problem</button>
@@ -161,6 +192,13 @@
     <h1 id="h-settings">Settings</h1>
     <p class="muted" id="settings-sub"></p>
     <div id="settings-body"></div>
+  </section>
+
+  <!-- ===== Admin: staff list and backups ===== -->
+  <section class="screen" id="s-staff" aria-labelledby="h-staff">
+    <h1 id="h-staff">Staff and backups</h1>
+    <p class="muted">Only people on this list can sign in as Worker / Faculty.</p>
+    <div id="staff-body"></div>
   </section>
 
   <!-- ===== Worker: set up area ===== -->
@@ -193,6 +231,6 @@
 <div class="sheet" id="sheet" role="dialog" aria-modal="true" aria-label="Profile" hidden><div class="sheet-card" id="sheet-card"></div></div>
 <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
 
-<script src="app.js?v=2026-10-24a"></script>
+<script src="app.js?v=2026-10-24c"></script>
 </body>
 </html>
